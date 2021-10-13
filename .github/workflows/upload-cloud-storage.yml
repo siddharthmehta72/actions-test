@@ -14,11 +14,11 @@ jobs:
     name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout
         with:
           ref: refs/heads/master
           fetch-depth: 1
-      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      - uses: google-github-actions/setup-gcloud@master
         with:
           version: '276.0.0'
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
