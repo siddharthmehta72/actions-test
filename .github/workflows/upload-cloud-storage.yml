@@ -15,9 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: refs/heads/master
-          fetch-depth: 1
       - uses: google-github-actions/setup-gcloud@master
         with:
           version: '276.0.0'
